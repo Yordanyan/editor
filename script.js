@@ -1,9 +1,9 @@
 function showPreview(){
-  var htmlCode = document.getElementById("htmlCode").value;
-  var cssCode = "<style>"+document.getElementById("cssCode").value+"</style>";
-  var jsCode = "<scri"+"pt>"+document.getElementById("jsCode").value+"</scri"+"pt>";
-  var frame = document.getElementById("preview-window").contentWindow.document;
+  var html = document.getElementById("html").value;
+  var css = "<style>"+document.getElementById("css").value+"</style>";
+  var js = "<scri"+"pt>"+document.getElementById("js").value+"</scri"+"pt>";
+  var frame = document.getElementById("preview").contentWindow.document;
   frame.open();
-  frame.write(htmlCode+cssCode+jsCode);
+  frame.write(html+css+js);
   frame.close();
 }
