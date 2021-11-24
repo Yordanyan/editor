@@ -1,25 +1,69 @@
-Hi
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Editor By yordanyaaan</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="script.js"></script>
-</head>
-<body>
-	<div class="code-area">
-  <textarea id="html" placeholder="HTML Code" 
-            oninput="showPreview()"></textarea>
-  <textarea id="css" placeholder="CSS Code" 
-            oninput="showPreview()"></textarea>
-  <textarea id="js" placeholder="JavaScript Code" 
-            oninput="showPreview()"></textarea>				
-</div>
-<div class="preview-area">
-  <iframe id="preview"></iframe>
-</div>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editor By yordanyaaan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css"
+    integrity="sha512-6sALqOPMrNSc+1p5xOhPwGIzs6kIlST+9oGWlI4Wwcbj1saaX9J3uzO3Vub016dmHV7hM+bMi/rfXLiF5DNIZg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://codemirror.net/addon/hint/show-hint.css">
+  <link rel="stylesheet" href="https://codemirror.net/theme/dracula.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"
+    integrity="sha512-w8mdbtlkBpU0p/dbFb4Oa1Hfd5k2mvOX82w0FnArHOPB28Ixai1Uj68X/3aK+/+35zNbTzBf9OfuSG+XTwnwCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://codemirror.net/addon/hint/show-hint.js"></script>
+  <script src="https://codemirror.net/addon/hint/css-hint.js"></script>
+  <script src="https://codemirror.net/addon/hint/javascript-hint.js"></script>
+  <script src="https://codemirror.net/addon/hint/xml-hint.js"></script>
+  <script src="https://codemirror.net/mode/xml/xml.js"></script>
+
+  <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+  <script src="https://codemirror.net/mode/css/css.js"></script>
+  <script src="https://codemirror.net/addon/edit/closetag.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <div class="code">
+    <header>
+      <h3>LEARM</h3>
+      <button id="run"> Run</button>
+    </header>
+
+    <div class="code-area">
+
+      <p>html code</p>
+      <textarea id="html" placeholder="HTML Code" oninput="showPreview()">
+
+      </textarea>
+      <p>css code</p>
+      <textarea id="css" placeholder="CSS Code" oninput="showPreview()"></textarea>
+      <p>js code</p>
+      <textarea id="js" placeholder="JavaScript Code" class="javascript">
+
+      </textarea>
+
+
+    </div>
+  </div>
+
+  <div class="res">
+    <div class="preview-area">
+      <iframe id="preview"></iframe>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>

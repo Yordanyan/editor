@@ -6,13 +6,48 @@
 body {
   height: 100vh;
   display: flex;
-  background: #ccc;
+ 
+  
+}
+header{
+  display: flex;
+  justify-content:flex-end;
+  background-color: rgb(31, 36, 48);
+  width: 100%;
+}
+header h3 {
+  width: 90%;
+  color: rgb(140, 255, 129);
+  padding-top: 10px;
+}
+#run{
+  
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+.code{
+  width: 50%;
+  background-color: rgb(31, 36, 48);
 }
 .code-area {
   display: flex;
   flex-direction:column;
-  width: 50%;
+  width: 100%;
   border-right:1px solid #555;
+}
+
+.code-area p{
+  background-color: rgba(31, 36, 48, 0.974);
+  color: rgba(192, 204, 255, 0.46);
+  height: 25px;
+  padding: 5px;
 }
 .code-area textarea {
   resize: none;
@@ -21,12 +56,25 @@ body {
   height: 33.33%;
   font-size: 18px;
   padding: 10px;
+  
+}
+
+
+
+.res{
+  width: 50%;
+  height: 100vh;
 }
 .preview-area {
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  
 }
+
 .preview-area iframe {
   width: 100%;
   height: 100%;
   border: none;
+ 
+  
 }

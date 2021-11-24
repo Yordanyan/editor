@@ -1,9 +1,49 @@
-function showPreview(){
-  var html = document.getElementById("html").value;
-  var css = "<style>"+document.getElementById("css").value+"</style>";
-  var js = "<scri"+"pt>"+document.getElementById("js").value+"</scri"+"pt>";
-  var frame = document.getElementById("preview").contentWindow.document;
-  frame.open();
-  frame.write(html+css+js);
-  frame.close();
-}
+let jsEditor = CodeMirror.fromTextArea(document.querySelector(".javascript"), {
+
+  mode: "javascript",
+  lineNumbers: true,
+  theme: 'dracula',
+  extraKeys: { "Ctrl-Space": "autocomplete" }
+
+
+
+
+});
+
+let cssEditor = CodeMirror.fromTextArea(document.querySelector("#css"), {
+
+  mode: "css",
+  lineNumbers: true,
+  theme: 'dracula',
+  extraKeys: { "Ctrl-Space": "autocomplete" }
+
+
+
+
+});
+
+let htmlEditor = CodeMirror.fromTextArea(document.querySelector("#html"), {
+
+  mode: "xml",
+  lineNumbers: true,
+  theme: 'dracula',
+  autoCloseTags: true,
+
+
+
+
+
+
+
+});
+
+document.querySelector("#run").addEventListener("click", () => {
+  let htmlCode = htmlEditor.getValue();
+  let cssCode = "<style>" + cssEditor.getValue() + "</style>";
+  let jsCode = "<scri" + "pt>" + jsEditor.getValue() + "</scri" + "pt>";
+
+  let previewWindow = document.querySelector("#preview").contentWindow.document;
+  previewWindow.open();
+  previewWindow.write(htmlCode + cssCode + jsCode)
+  previewWindow.close()
+})
